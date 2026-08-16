@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SEBF.H.GAMES</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #050510;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Luces de fondo */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.5;
+      z-index: -1;
+      animation: mover 6s infinite alternate ease-in-out;
+    }
+
+    body::before {
+      background: #7c00ff;
+      top: -100px;
+      left: -100px;
+    }
+
+    body::after {
+      background: #00eaff;
+      bottom: -100px;
+      right: -100px;
+      animation-delay: 2s;
+    }
+
+    @keyframes mover {
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(100px, 80px);
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    .logo {
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #7c00ff;
+    }
+
+    .subtitulo {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .botones {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 13px 25px;
+      margin: 6px;
+      border: 1px solid #00eaff;
+      border-radius: 10px;
+      background: rgba(0, 234, 255, 0.08);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00eaff;
+      color: #050510;
+      box-shadow: 0 0 20px #00eaff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    .juegos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .juego {
+      padding: 25px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,234,255,0.25);
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .juego:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,234,255,0.3);
+    }
+
+    .juego h3 {
+      margin-bottom: 10px;
+    }
+
+    .juego p {
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">SEBF.H.GAMES</div>
+
+    <p class="subtitulo">
+      🎮 Juegos creados por mí
+    </p>
+
+    <div class="botones">
+      <button onclick="document.getElementById('juegos').scrollIntoView()">
+        🎮 Mis juegos
+      </button>
+
+      <button onclick="document.getElementById('sobre').scrollIntoView()">
+        👤 Sobre mí
+      </button>
+    </div>
+  </header>
+
+  <section id="juegos">
+    <h2>🎮 MIS JUEGOS</h2>
+
+    <div class="juegos">
+
+      <div class="juego">
+        <h3>🍎 Atrapar Manzanas</h3>
+        <p>
+          Un pequeño juego arcade donde tienes que atrapar
+          las manzanas y evitar las bombas.
+        </p>
+      </div>
+
+      <div class="juego">
+        <h3>🦊 Próximamente</h3>
+        <p>
+          Un nuevo juego está en desarrollo...
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>👤 SOBRE SEBF.H.GAMES</h2>
+
+    <p style="text-align:center; color:#aaa; line-height:1.7;">
+      Bienvenido a SEBF.H.GAMES.
+      Aquí encontrarás mis juegos, proyectos
+      y futuras creaciones. 🎮🔥
+    </p>
+  </section>
+
+  <footer>
+    © 2026 SEBF.H.GAMES
+  </footer>
+
+</body>
+</html>
