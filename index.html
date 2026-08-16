@@ -166,11 +166,22 @@
       backdrop-filter: blur(10px);
       transition: 0.3s;
       animation: aparecer 1s ease;
+      cursor: pointer;
     }
 
     .juego:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 0 30px rgba(0,234,255,0.3);
+      transform: translateY(-10px) scale(1.02);
+      box-shadow:
+        0 0 15px #00eaff,
+        0 0 35px rgba(0,234,255,0.45),
+        0 0 60px rgba(124,0,255,0.35);
+    }
+
+    .juego:active {
+      transform: translateY(-3px) scale(0.98);
+      box-shadow:
+        0 0 10px #00eaff,
+        0 0 25px rgba(0,234,255,0.5);
     }
 
     .imagen-juego {
@@ -308,6 +319,7 @@
       .imagen-juego {
         height: 180px;
       }
+
     }
 
   </style>
@@ -359,6 +371,7 @@
       <!-- ATRAPAR MANZANAS -->
 
       <a href="juegos/atrapar-manzanas.html" class="juego">
+
         <div class="imagen-juego"></div>
 
         <div class="etiqueta">
@@ -379,162 +392,4 @@
           Este fue uno de mis primeros proyectos de
           desarrollo, creado desde cero mientras aprendía
           a desarrollar videojuegos.
-        </p>
-
-        <button
-          class="descargar"
-          onclick="event.preventDefault(); event.stopPropagation();">
-          ⬇️ DESCARGAR
-        </button>
-
-      </a>
-
-
-      <!-- EL ZORRO -->
-
-      <a href="juegos/el-zorro.html" class="juego">
-
-        <div class="imagen-juego"></div>
-
-        <div class="etiqueta">
-          🏆 PROYECTO EN DESARROLLO
-        </div>
-
-        <h3>
-          🦊 El Zorro
-        </h3>
-
-        <p>
-          Un nuevo juego de aventura protagonizado
-          por un pequeño zorro equipado con su espada.
-          ⚔️🦊
-        </p>
-
-        <p>
-          Próximamente en SEBF.H.GAMES... 🔥
-        </p>
-
-        <button
-          class="descargar"
-          onclick="alert('🚧 ¡Este juego todavía está en desarrollo! 👀')">
-          🔒 PRÓXIMAMENTE
-        </button>
-
-      </a>
-
-
-    </div>
-
-
-    <!-- PRÓXIMOS PROYECTOS -->
-
-    <h2 style="margin-top:80px;">
-      🚧 PRÓXIMOS PROYECTOS
-    </h2>
-
-    <div class="proyectos">
-
-      <div class="proyecto">
-
-        <h3>
-          🦊 El Zorro
-        </h3>
-
-        <p>
-          Una aventura protagonizada por un pequeño
-          zorro equipado con una espada. ⚔️
-          Actualmente en desarrollo.
-        </p>
-
-      </div>
-
-
-      <div class="proyecto">
-
-        <h3>
-          🎮 Proyecto secreto #2
-        </h3>
-
-        <p>
-          Algo nuevo se está cocinando...
-          👀🔥
-        </p>
-
-      </div>
-
-
-      <div class="proyecto">
-
-        <h3>
-          🎮 Proyecto secreto #3
-        </h3>
-
-        <p>
-          Próximamente habrá más información.
-          🤫
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SOBRE MÍ -->
-
-  <section id="sobre">
-
-    <h2>
-      👤 SOBRE MÍ
-    </h2>
-
-    <div class="sobre">
-
-      <p>
-
-        ¡Hola! Soy Sebas, creador de SEBF.H.GAMES. 🎮
-
-        <br><br>
-
-        Todo empezó con una idea sencilla:
-        quería crear mis propios videojuegos.
-        Al principio no sabía mucho sobre desarrollo,
-        pero empecé a experimentar, aprender y probar
-        diferentes herramientas.
-
-        <br><br>
-
-        Uno de mis primeros proyectos fue
-        <strong>Atrapar Manzanas 🍎</strong>,
-        un juego sencillo que me ayudó a aprender
-        sobre mecánicas, sonidos, puntuación y diseño.
-
-        <br><br>
-
-        Desde entonces, he seguido creando nuevas ideas
-        y proyectos. SEBF.H.GAMES nace con la intención
-        de convertir esas ideas en juegos que otras
-        personas puedan disfrutar. 🚀
-
-      </p>
-
-      <div class="frase-final">
-
-        “Una idea. Un juego. Una historia.” 🔥
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-
-    © 2026 SEBF.H.GAMES
-
-  </footer>
-
-</body>
-</html>
+        </
