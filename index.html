@@ -159,30 +159,18 @@
     }
 
     .juego {
-      display: block;
       padding: 20px;
       border-radius: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(0,234,255,0.25);
       backdrop-filter: blur(10px);
-      transition: 0.25s ease;
+      transition: 0.3s;
       animation: aparecer 1s ease;
-      color: white;
-      text-decoration: none;
     }
 
     .juego:hover {
-      transform: translateY(-7px) scale(1.02);
-      box-shadow:
-        0 0 15px #00eaff,
-        0 0 35px rgba(124,0,255,0.5);
-    }
-
-    .juego:active {
-      transform: scale(0.97);
-      box-shadow:
-        0 0 20px #00eaff,
-        0 0 40px #7c00ff;
+      transform: translateY(-7px);
+      box-shadow: 0 0 30px rgba(0,234,255,0.3);
     }
 
     .imagen-juego {
@@ -216,7 +204,6 @@
     }
 
     .descargar {
-      display: block;
       width: 100%;
       padding: 13px;
       border: 1px solid #00eaff;
@@ -224,7 +211,6 @@
       background: rgba(0,234,255,0.08);
       color: white;
       font-weight: bold;
-      text-align: center;
       cursor: pointer;
       transition: 0.3s;
     }
@@ -304,4 +290,249 @@
 
     /* CELULAR */
 
-    @media (max-width: 500            
+    @media (max-width: 500px) {
+
+      nav {
+        gap: 2px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 9px 10px;
+      }
+
+      section {
+        padding: 55px 15px;
+      }
+
+      .imagen-juego {
+        height: 180px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENÚ -->
+
+  <nav>
+
+    <a href="#inicio">🏠 INICIO</a>
+
+    <a href="#juegos">🎮 JUEGOS</a>
+
+    <a href="#sobre">👤 SOBRE MÍ</a>
+
+  </nav>
+
+
+  <!-- INICIO -->
+
+  <section id="inicio">
+
+    <div class="logo">
+      SEBF.H.GAMES
+    </div>
+
+    <p class="frase">
+      Creando juegos, una idea a la vez. 🎮
+    </p>
+
+    <a class="boton-principal" href="#juegos">
+      🚀 VER MIS JUEGOS
+    </a>
+
+  </section>
+
+
+  <!-- JUEGOS -->
+
+  <section id="juegos">
+
+    <h2>🎮 MIS JUEGOS</h2>
+
+    <div class="juegos">
+
+
+      <!-- ATRAPAR MANZANAS -->
+
+      <a href="juegos/atrapar-manzanas.html" class="juego">
+        <div class="imagen-juego"></div>
+
+        <div class="etiqueta">
+          🏆 PRIMER PROYECTO
+        </div>
+
+        <h3>
+          🍎 Atrapar Manzanas
+        </h3>
+
+        <p>
+          Un pequeño juego creado por SEBF.H.GAMES,
+          donde tendrás que atrapar manzanas, conseguir
+          puntos y sobrevivir a los obstáculos. 🎮
+        </p>
+
+        <p>
+          Este fue uno de mis primeros proyectos de
+          desarrollo, creado desde cero mientras aprendía
+          a desarrollar videojuegos.
+        </p>
+
+        <button class="descargar">
+          ⬇️ DESCARGAR
+        </button>
+
+      </a>
+
+
+      <!-- EL ZORRO -->
+
+      <a href="juegos/el-zorro.html" class="juego">
+
+        <div class="imagen-juego"></div>
+
+        <div class="etiqueta">
+          🏆 PROYECTO EN DESARROLLO
+        </div>
+
+        <h3>
+          🦊 El Zorro
+        </h3>
+
+        <p>
+          Un nuevo juego de aventura protagonizado
+          por un pequeño zorro equipado con su espada.
+          ⚔️🦊
+        </p>
+
+        <p>
+          Próximamente en SEBF.H.GAMES... 🔥
+        </p>
+
+        <button
+          class="descargar"
+          onclick="alert('🚧 ¡Este juego todavía está en desarrollo! 👀')">
+          🔒 PRÓXIMAMENTE
+        </button>
+
+      </a>
+
+
+    </div>
+
+
+    <!-- PRÓXIMOS PROYECTOS -->
+
+    <h2 style="margin-top:80px;">
+      🚧 PRÓXIMOS PROYECTOS
+    </h2>
+
+    <div class="proyectos">
+
+      <div class="proyecto">
+
+        <h3>
+          🦊 El Zorro
+        </h3>
+
+        <p>
+          Una aventura protagonizada por un pequeño
+          zorro equipado con una espada. ⚔️
+          Actualmente en desarrollo.
+        </p>
+
+      </div>
+
+
+      <div class="proyecto">
+
+        <h3>
+          🎮 Proyecto secreto #2
+        </h3>
+
+        <p>
+          Algo nuevo se está cocinando...
+          👀🔥
+        </p>
+
+      </div>
+
+
+      <div class="proyecto">
+
+        <h3>
+          🎮 Proyecto secreto #3
+        </h3>
+
+        <p>
+          Próximamente habrá más información.
+          🤫
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOBRE MÍ -->
+
+  <section id="sobre">
+
+    <h2>
+      👤 SOBRE MÍ
+    </h2>
+
+    <div class="sobre">
+
+      <p>
+
+        ¡Hola! Soy Sebas, creador de SEBF.H.GAMES. 🎮
+
+        <br><br>
+
+        Todo empezó con una idea sencilla:
+        quería crear mis propios videojuegos.
+        Al principio no sabía mucho sobre desarrollo,
+        pero empecé a experimentar, aprender y probar
+        diferentes herramientas.
+
+        <br><br>
+
+        Uno de mis primeros proyectos fue
+        <strong>Atrapar Manzanas 🍎</strong>,
+        un juego sencillo que me ayudó a aprender
+        sobre mecánicas, sonidos, puntuación y diseño.
+
+        <br><br>
+
+        Desde entonces, he seguido creando nuevas ideas
+        y proyectos. SEBF.H.GAMES nace con la intención
+        de convertir esas ideas en juegos que otras
+        personas puedan disfrutar. 🚀
+
+      </p>
+
+      <div class="frase-final">
+
+        “Una idea. Un juego. Una historia.” 🔥
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 SEBF.H.GAMES
+
+  </footer>
+
+</body>
+</html>
