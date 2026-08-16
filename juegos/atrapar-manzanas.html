@@ -34,11 +34,13 @@
       border-radius: 10px;
       color: white;
       text-decoration: none;
+      transition: 0.3s;
     }
 
     .volver:hover {
       background: #00eaff;
       color: #050510;
+      box-shadow: 0 0 20px #00eaff;
     }
 
     h1 {
@@ -62,6 +64,12 @@
       border-radius: 15px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(0,234,255,0.25);
+      transition: 0.3s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(0,234,255,0.25);
     }
 
     h2 {
@@ -84,6 +92,7 @@
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     .descargar:hover {
@@ -98,19 +107,37 @@
 
   <div class="contenedor">
 
-    <a class="volver" href="../index.html">
+    <!-- VOLVER AL INICIO -->
+
+    <a
+      class="volver"
+      href="https://xthedarkdemonx14x-ctrl.github.io/SEBF-H-GAMES/">
       ← Volver a SEBF.H.GAMES
     </a>
 
-    <h1>🍎 Atrapar Manzanas</h1>
+
+    <!-- TÍTULO -->
+
+    <h1>
+      🍎 Atrapar Manzanas
+    </h1>
+
+
+    <!-- IMAGEN -->
 
     <div class="imagen"></div>
 
+
+    <!-- HISTORIA -->
+
     <div class="tarjeta">
 
-      <h2>📖 Historia del juego</h2>
+      <h2>
+        📖 Historia del juego
+      </h2>
 
       <p>
+
         Atrapar Manzanas nació como uno de mis primeros
         proyectos de desarrollo de videojuegos.
 
@@ -125,36 +152,60 @@
 
         Este proyecto fue una de las primeras experiencias
         que tuve creando un videojuego desde cero.
+
       </p>
 
     </div>
 
+
+    <!-- HERRAMIENTAS -->
+
     <div class="tarjeta">
 
-      <h2>🛠️ Herramientas utilizadas</h2>
+      <h2>
+        🛠️ Herramientas utilizadas
+      </h2>
 
       <p>
+
         🎮 Pocket Code
+
         <br><br>
+
         💡 Diseñado y desarrollado como proyecto independiente.
+
       </p>
 
     </div>
 
+
+    <!-- SOBRE EL JUEGO -->
+
     <div class="tarjeta">
 
-      <h2>🎮 Sobre el juego</h2>
+      <h2>
+        🎮 Sobre el juego
+      </h2>
 
       <p>
+
         Atrapa las manzanas para conseguir puntos,
         evita las bombas y utiliza diferentes elementos
         para intentar conseguir la mejor puntuación. 🍎💣
+
       </p>
 
     </div>
 
-    <button class="descargar">
+
+    <!-- DESCARGAR -->
+
+    <button
+      class="descargar"
+      onclick="alert('🚧 La descarga todavía no está disponible. ¡Próximamente! 🔥')">
+
       ⬇️ DESCARGAR
+
     </button>
 
   </div>
