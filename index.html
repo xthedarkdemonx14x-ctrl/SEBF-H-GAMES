@@ -21,7 +21,6 @@
       overflow-x: hidden;
     }
 
-    /* Luces de fondo */
     body::before,
     body::after {
       content: "";
@@ -75,7 +74,6 @@
     .subtitulo {
       margin-top: 10px;
       color: #aaa;
-      font-size: 16px;
     }
 
     .botones {
@@ -114,13 +112,13 @@
 
     .juegos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .juego {
-      padding: 25px;
-      border-radius: 15px;
+      padding: 20px;
+      border-radius: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(0,234,255,0.25);
       backdrop-filter: blur(10px);
@@ -132,13 +130,40 @@
       box-shadow: 0 0 25px rgba(0,234,255,0.3);
     }
 
+    .imagen-juego {
+      width: 100%;
+      height: 200px;
+      background: white;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: rgba(0,234,255,0.1);
+      border: 1px solid #00eaff;
+      color: #00eaff;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
     .juego h3 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 24px;
     }
 
     .juego p {
       color: #aaa;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .descargar {
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     footer {
@@ -165,46 +190,4 @@
 
       <button onclick="document.getElementById('sobre').scrollIntoView()">
         👤 Sobre mí
-      </button>
-    </div>
-  </header>
-
-  <section id="juegos">
-    <h2>🎮 MIS JUEGOS</h2>
-
-    <div class="juegos">
-
-      <div class="juego">
-        <h3>🍎 Atrapar Manzanas</h3>
-        <p>
-          Un pequeño juego arcade donde tienes que atrapar
-          las manzanas y evitar las bombas.
-        </p>
-      </div>
-
-      <div class="juego">
-        <h3>🦊 Próximamente</h3>
-        <p>
-          Un nuevo juego está en desarrollo...
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="sobre">
-    <h2>👤 SOBRE SEBF.H.GAMES</h2>
-
-    <p style="text-align:center; color:#aaa; line-height:1.7;">
-      Bienvenido a SEBF.H.GAMES.
-      Aquí encontrarás mis juegos, proyectos
-      y futuras creaciones. 🎮🔥
-    </p>
-  </section>
-
-  <footer>
-    © 2026 SEBF.H.GAMES
-  </footer>
-
-</body>
-</html>
+     
