@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>SEBF.H.GAMES</title>
 
   <style>
@@ -11,6 +12,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -24,25 +26,25 @@
     body::after {
       content: "";
       position: fixed;
-      width: 300px;
-      height: 300px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.5;
+      filter: blur(110px);
+      opacity: 0.45;
       z-index: -1;
-      animation: mover 6s infinite alternate ease-in-out;
+      animation: mover 7s infinite alternate ease-in-out;
     }
 
     body::before {
       background: #7c00ff;
-      top: -100px;
-      left: -100px;
+      top: -120px;
+      left: -120px;
     }
 
     body::after {
       background: #00eaff;
-      bottom: -100px;
-      right: -100px;
+      bottom: -120px;
+      right: -120px;
       animation-delay: 2s;
     }
 
@@ -56,58 +58,99 @@
       }
     }
 
-    header {
+    /* MENÚ */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      background: rgba(5, 5, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 234, 255, 0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: #00eaff;
+      color: #050510;
+      box-shadow: 0 0 18px #00eaff;
+    }
+
+    /* INICIO */
+
+    #inicio {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 70px 20px 40px;
+      padding: 40px 20px;
     }
 
     .logo {
-      font-size: 42px;
+      font-size: clamp(35px, 10vw, 60px);
       font-weight: bold;
       letter-spacing: 3px;
       text-shadow:
         0 0 10px #00eaff,
-        0 0 25px #7c00ff;
+        0 0 25px #7c00ff,
+        0 0 50px #7c00ff;
+      animation: aparecer 1s ease;
     }
 
-    .subtitulo {
-      margin-top: 10px;
+    .frase {
+      margin-top: 15px;
       color: #aaa;
+      font-size: 17px;
     }
 
-    .botones {
+    .boton-principal {
       margin-top: 30px;
-    }
-
-    button {
-      padding: 13px 25px;
-      margin: 6px;
+      padding: 14px 30px;
       border: 1px solid #00eaff;
-      border-radius: 10px;
+      border-radius: 12px;
       background: rgba(0, 234, 255, 0.08);
       color: white;
-      cursor: pointer;
+      text-decoration: none;
       transition: 0.3s;
     }
 
-    button:hover {
+    .boton-principal:hover {
       background: #00eaff;
       color: #050510;
-      box-shadow: 0 0 20px #00eaff;
+      box-shadow: 0 0 25px #00eaff;
     }
 
+    /* SECCIONES */
+
     section {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 70px 20px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       color: #00eaff;
-      text-shadow: 0 0 10px #00eaff;
+      text-shadow: 0 0 12px #00eaff;
+      font-size: 30px;
     }
+
+    /* TARJETAS */
 
     .juegos {
       display: grid;
@@ -122,11 +165,12 @@
       border: 1px solid rgba(0,234,255,0.25);
       backdrop-filter: blur(10px);
       transition: 0.3s;
+      animation: aparecer 1s ease;
     }
 
     .juego:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,234,255,0.3);
+      transform: translateY(-7px);
+      box-shadow: 0 0 30px rgba(0,234,255,0.3);
     }
 
     .imagen-juego {
@@ -161,64 +205,149 @@
 
     .descargar {
       width: 100%;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .proximamente {
-      border-color: rgba(124,0,255,0.4);
-    }
-
-    .proximamente .etiqueta {
-      color: #c77dff;
-      border-color: #7c00ff;
-      background: rgba(124,0,255,0.1);
-    }
-
-    .proximamente button {
-      border-color: #7c00ff;
-    }
-
-    .proximamente button:hover {
-      background: #7c00ff;
+      padding: 13px;
+      border: 1px solid #00eaff;
+      border-radius: 10px;
+      background: rgba(0,234,255,0.08);
       color: white;
-      box-shadow: 0 0 20px #7c00ff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .descargar:hover {
+      background: #00eaff;
+      color: #050510;
+      box-shadow: 0 0 20px #00eaff;
+    }
+
+    /* PROYECTOS */
+
+    .proyectos {
+      display: grid;
+      gap: 20px;
+    }
+
+    .proyecto {
+      padding: 22px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(124,0,255,0.35);
+      transition: 0.3s;
+    }
+
+    .proyecto:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px rgba(124,0,255,0.25);
+    }
+
+    .proyecto h3 {
+      margin-bottom: 8px;
+    }
+
+    .proyecto p {
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    /* SOBRE MÍ */
+
+    .sobre {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #aaa;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .frase-final {
+      margin-top: 30px;
+      color: #00eaff;
+      font-size: 22px;
+      font-weight: bold;
+      text-shadow: 0 0 12px #00eaff;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       color: #666;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 500px) {
+
+      nav {
+        gap: 2px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 9px 10px;
+      }
+
+      section {
+        padding: 55px 15px;
+      }
+
+      .imagen-juego {
+        height: 180px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-  <header>
+  <!-- MENÚ -->
+
+  <nav>
+
+    <a href="#inicio">🏠 INICIO</a>
+
+    <a href="#juegos">🎮 JUEGOS</a>
+
+    <a href="#sobre">👤 SOBRE MÍ</a>
+
+  </nav>
+
+
+  <!-- INICIO -->
+
+  <section id="inicio">
 
     <div class="logo">
       SEBF.H.GAMES
     </div>
 
-    <p class="subtitulo">
-      🎮 Juegos creados por mí
+    <p class="frase">
+      Creando juegos, una idea a la vez. 🎮
     </p>
 
-    <div class="botones">
+    <a class="boton-principal" href="#juegos">
+      🚀 VER MIS JUEGOS
+    </a>
 
-      <button onclick="document.getElementById('juegos').scrollIntoView()">
-        🎮 Mis juegos
-      </button>
+  </section>
 
-      <button onclick="document.getElementById('sobre').scrollIntoView()">
-        👤 Sobre mí
-      </button>
 
-    </div>
-
-  </header>
-
+  <!-- JUEGOS -->
 
   <section id="juegos">
 
@@ -234,7 +363,7 @@
         <div class="imagen-juego"></div>
 
         <div class="etiqueta">
-          🏆 PRIMER PROYECTO DE SEBF.H.GAMES
+          🏆 PRIMER PROYECTO
         </div>
 
         <h3>
@@ -250,9 +379,7 @@
         <p>
           Este fue uno de mis primeros proyectos de
           desarrollo, creado desde cero mientras aprendía
-          a desarrollar videojuegos. Cada mecánica, sonido
-          y detalle representa una parte del proceso de
-          convertir una idea sencilla en un juego propio. 🔥
+          a desarrollar videojuegos.
         </p>
 
         <button class="descargar">
@@ -264,7 +391,7 @@
 
       <!-- EL ZORRO -->
 
-      <div class="juego proximamente">
+      <div class="juego">
 
         <div class="imagen-juego"></div>
 
@@ -297,22 +424,107 @@
 
     </div>
 
+
+    <!-- PRÓXIMOS PROYECTOS -->
+
+    <h2 style="margin-top:80px;">
+      🚧 PRÓXIMOS PROYECTOS
+    </h2>
+
+    <div class="proyectos">
+
+      <div class="proyecto">
+
+        <h3>
+          🦊 El Zorro
+        </h3>
+
+        <p>
+          Una aventura protagonizada por un pequeño
+          zorro equipado con una espada. ⚔️
+          Actualmente en desarrollo.
+        </p>
+
+      </div>
+
+
+      <div class="proyecto">
+
+        <h3>
+          🎮 Proyecto secreto #2
+        </h3>
+
+        <p>
+          Algo nuevo se está cocinando...
+          👀🔥
+        </p>
+
+      </div>
+
+
+      <div class="proyecto">
+
+        <h3>
+          🎮 Proyecto secreto #3
+        </h3>
+
+        <p>
+          Próximamente habrá más información.
+          🤫
+        </p>
+
+      </div>
+
+    </div>
+
   </section>
 
+
+  <!-- SOBRE MÍ -->
 
   <section id="sobre">
 
     <h2>
-      👤 SOBRE SEBF.H.GAMES
+      👤 SOBRE MÍ
     </h2>
 
-    <p style="text-align:center; color:#aaa; line-height:1.7;">
+    <div class="sobre">
 
-      Bienvenido a SEBF.H.GAMES.
-      Este es un espacio para compartir mis juegos,
-      proyectos y futuras creaciones. 🎮🔥
+      <p>
 
-    </p>
+        ¡Hola! Soy Sebas, creador de SEBF.H.GAMES. 🎮
+
+        <br><br>
+
+        Todo empezó con una idea sencilla:
+        quería crear mis propios videojuegos.
+        Al principio no sabía mucho sobre desarrollo,
+        pero empecé a experimentar, aprender y probar
+        diferentes herramientas.
+
+        <br><br>
+
+        Uno de mis primeros proyectos fue
+        <strong>Atrapar Manzanas 🍎</strong>,
+        un juego sencillo que me ayudó a aprender
+        sobre mecánicas, sonidos, puntuación y diseño.
+
+        <br><br>
+
+        Desde entonces, he seguido creando nuevas ideas
+        y proyectos. SEBF.H.GAMES nace con la intención
+        de convertir esas ideas en juegos que otras
+        personas puedan disfrutar. 🚀
+
+      </p>
+
+      <div class="frase-final">
+
+        “Una idea. Un juego. Una historia.” 🔥
+
+      </div>
+
+    </div>
 
   </section>
 
